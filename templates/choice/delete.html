@@ -3,8 +3,8 @@
 {% block content %}
 <form action="" method="post">
  {% csrf_token %}
-    <h3>Удалить <i class="text-danger">{{ task.summary }}</i>?</h3>
+    <h3>Удалить <i class="text-danger">{{ choice.text }}</i>?</h3>
     <button type="submit" class="btn btn-success p-3  mb-2  " >Да</button>
 </form>
-<a href="{% url "index" %}" class="btn btn-danger p-3"  role="button"  >Нет</a>
+<a href="{% url "view_poll" choice.poll.pk %}" class="btn btn-danger p-3"  role="button"  >Нет</a>
 {% endblock %}
