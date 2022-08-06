@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block nav %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'add_poll' %}">Добавить Опрос</a>
+    </li>
+{% endblock %}
+{% block content %}
+    {% include "partial/simple_search.html" %}
+    <h1 class="text-success">Опросы</h1>
+    <div class="row">
+        {% for poll in polls %}
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card bg-warning ">
+                    <div class="card-body">
+                        <h5 class="card-title"><span class="fs-3">{{ poll.question }}</span></h5>
+                        <p class="bg-warning"><a href="{% url 'view_poll' poll.pk %}"><img
+                                src="https://ru.seaicons.com/wp-content/uploads/2015/10/Preview-icon2.png"
+                                width="25"
+                                height="25" alt="Просмотр"></a>
+                            <a href="{% url 'update_poll' poll.pk %}"><img
+                                    src="https://ru.seaicons.com/wp-content/uploads/2015/11/Editing-Edit-icon.png"
+                                    width="25"
+                                    height="25" alt="Редактирования"></a>
+                            <a href="{% url 'delete_poll' poll.pk %}"><img
+                                    src="https://cdn-icons-png.flaticon.com/512/70/70757.png"
+                                    width="25"
+                                    height="25" alt="Удаления"></a></p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        {% if is_paginated %}
+            {% include "partial/pagination.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

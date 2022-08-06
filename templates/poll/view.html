@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Просмотр Опроса{% endblock %}
+{% block nav %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url "add" poll.pk %}">Новый ответ</a>
+    </li>
+{% endblock %}
+{% block content %}
+    <p>
+        <span class="fw-bold">Опрос №:</span> {{ poll.pk }}
+    </p>
+    <p class="fw-bold">Ответы:</p>
+    {% for choice in poll.poll.all %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card bg-warning ">
+                <div class="card-body">
+                    <h5 class="card-title"><span class="fs-3">{{ choice.text }}</span></h5>
+                    <a href="{% url 'update' choice.pk %}"><img
+                            src="https://ru.seaicons.com/wp-content/uploads/2015/11/Editing-Edit-icon.png"
+                            width="25"
+                            height="25" alt="Редактирования"></a>
+                    <a href="{% url 'delete' choice.pk %}"><img
+                            src="https://cdn-icons-png.flaticon.com/512/70/70757.png"
+                            width="25"
+                            height="25" alt="Удаления"></a></p>
+
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <p>Опросов нету</p>
+    {% endfor %}
+{% endblock %}
