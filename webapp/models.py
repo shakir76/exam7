@@ -1,6 +1,5 @@
 from django.db import models
 
-
 # Create your models here.
 from django.urls import reverse
 
@@ -33,3 +32,19 @@ class Choice(models.Model):
         db_table = "Choice"
         verbose_name = "Ответ"
         verbose_name_plural = "Ответы"
+
+
+class Answer(models.Model):
+    poll = models.ForeignKey("webapp.Poll", on_delete=models.CASCADE, related_name="polls",
+                             verbose_name="Опрос")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата создания")
+    choice = models.ForeignKey("webapp.Choice", on_delete=models.CASCADE, related_name="choices",
+                               verbose_name="Ответ")
+
+    def __str__(self):
+        return f"{self.poll} - {self.choice}"
+
+    class Meta:
+        db_table = "Answer"
+        verbose_name = "Опросник"
+        verbose_name_plural = "Опросники"

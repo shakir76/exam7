@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from webapp.models import Poll, Choice
+from webapp.models import Poll, Choice, Answer
 
 
 class PollAdmin(admin.ModelAdmin):
@@ -20,5 +20,14 @@ class ChoiceAdmin(admin.ModelAdmin):
     fields = ['text', 'poll']
 
 
+class AnswerAdmin(admin.ModelAdmin):
+    list_display = ['id', 'poll', 'choice']
+    list_display_links = ['poll']
+    list_filter = ['choice', 'poll']
+    search_fields = ['poll', ]
+    fields = ['poll', 'choice']
+
+
+admin.site.register(Answer, AnswerAdmin)
 admin.site.register(Poll, PollAdmin)
 admin.site.register(Choice, ChoiceAdmin)
