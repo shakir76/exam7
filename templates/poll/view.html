@@ -2,7 +2,7 @@
 {% block title %}Просмотр Опроса{% endblock %}
 {% block nav %}
     <li class="nav-item">
-        <a class="nav-link" href="{% url "add" poll.pk %}">Новый ответ</a>
+        <a class="nav-link" href="{% url "create_poll" poll.pk %}">Новый ответ</a>
     </li>
 {% endblock %}
 {% block content %}
@@ -15,11 +15,11 @@
             <div class="card bg-warning ">
                 <div class="card-body">
                     <h5 class="card-title"><span class="fs-3">{{ choice.text }}</span></h5>
-                    <a href="{% url 'update' choice.pk %}"><img
+                    <a href="{% url 'update_poll' choice.pk %}"><img
                             src="https://ru.seaicons.com/wp-content/uploads/2015/11/Editing-Edit-icon.png"
                             width="25"
                             height="25" alt="Редактирования"></a>
-                    <a href="{% url 'delete' choice.pk %}"><img
+                    <a href="{% url 'delete_poll' choice.pk %}"><img
                             src="https://cdn-icons-png.flaticon.com/512/70/70757.png"
                             width="25"
                             height="25" alt="Удаления"></a></p>

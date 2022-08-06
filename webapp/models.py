@@ -2,6 +2,7 @@ from django.db import models
 
 
 # Create your models here.
+from django.urls import reverse
 
 
 class Poll(models.Model):
@@ -15,6 +16,9 @@ class Poll(models.Model):
         db_table = "Polls"
         verbose_name = "Опрос"
         verbose_name_plural = "Опросы"
+
+    def get_absolute_url(self):
+        return reverse('view_poll', kwargs={"pk": self.pk})
 
 
 class Choice(models.Model):
