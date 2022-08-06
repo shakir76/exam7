@@ -4,6 +4,9 @@
     <li class="nav-item">
         <a class="nav-link" href="{% url "add_choice" poll.pk %}">Новый ответ</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url "add_answer" poll.pk %}">Проголосовать</a>
+    </li>
 {% endblock %}
 {% block content %}
     <p>

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Голосования{% endblock %}
+
+
+{% block content %}
+    <h1> {{ poll.question }}?</h1>
+
+    <form action="" method="post">
+        {% include "partial/form.html" with button_text="Голосовать" %}
+    </form>
+{% endblock %}

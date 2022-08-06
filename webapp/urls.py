@@ -1,6 +1,7 @@
 from django.urls import path
 
-from webapp.views import IndexPollView, PollView, CreatePoll, UpdatePoll, DeletePoll, CreateChoice, UpdateChoice
+from webapp.views import IndexPollView, PollView, CreatePoll, UpdatePoll, DeletePoll, CreateChoice, UpdateChoice, \
+    AnswerAdd
 
 urlpatterns = [
     path('', IndexPollView.as_view(), name="index_poll"),
@@ -10,5 +11,6 @@ urlpatterns = [
     path('poll/delete/<int:pk>/', DeletePoll.as_view(), name="delete_poll"),
     path('poll/<int:pk>/choice/add/', CreateChoice.as_view(), name="add_choice"),
     path('poll/<int:pk>/choice/update', UpdateChoice.as_view(), name="update_choice"),
-    path('poll/<int:pk>/choice/delete', DeletePoll.as_view(), name="delete_choice")
+    path('poll/<int:pk>/choice/delete', DeletePoll.as_view(), name="delete_choice"),
+    path('poll/<int:pk>/answer/add/', AnswerAdd.as_view(), name="add_answer"),
 ]
