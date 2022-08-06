@@ -13,7 +13,8 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card bg-warning ">
                     <div class="card-body">
-                        <h5 class="card-title"><span class="fs-3">{{ poll.question }}</span></h5>
+                        <h5 class="card-title"><span class="fs-3">Опрос№{{ poll.pk }}</span></h5>
+                        <h4>Вопрос<i class="fs-3">{{ poll.question }}?</i></h4>
                         <p class="bg-warning"><a href="{% url 'view_poll' poll.pk %}"><img
                                 src="https://ru.seaicons.com/wp-content/uploads/2015/10/Preview-icon2.png"
                                 width="25"

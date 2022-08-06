@@ -1,0 +1,185 @@
+[
+{
+    "model": "webapp.poll",
+    "pk": 1,
+    "fields": {
+        "question": "Vopros1",
+        "created_at": "2022-08-06T13:12:44.808Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 2,
+    "fields": {
+        "question": "Vopros12",
+        "created_at": "2022-08-06T15:59:24.089Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 4,
+    "fields": {
+        "question": "Vopros16",
+        "created_at": "2022-08-06T16:01:50.483Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 5,
+    "fields": {
+        "question": "Vopros2",
+        "created_at": "2022-08-06T16:01:54.251Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 6,
+    "fields": {
+        "question": "Vopros5",
+        "created_at": "2022-08-06T16:01:57.233Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 7,
+    "fields": {
+        "question": "Opros6",
+        "created_at": "2022-08-06T16:02:00.395Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 8,
+    "fields": {
+        "question": "Opros7",
+        "created_at": "2022-08-06T18:34:52.383Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 9,
+    "fields": {
+        "question": "Opros24234",
+        "created_at": "2022-08-06T18:35:08.821Z"
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 2,
+    "fields": {
+        "text": "Otvet5",
+        "poll": 1
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 3,
+    "fields": {
+        "text": "Otvet2",
+        "poll": 1
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 5,
+    "fields": {
+        "text": "aga was",
+        "poll": 6
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 6,
+    "fields": {
+        "text": "Otvet6",
+        "poll": 1
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 7,
+    "fields": {
+        "text": "Otvet1",
+        "poll": 8
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 8,
+    "fields": {
+        "text": "aga wдло",
+        "poll": 8
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 9,
+    "fields": {
+        "text": "Otvet1234",
+        "poll": 8
+    }
+},
+{
+    "model": "webapp.answer",
+    "pk": 1,
+    "fields": {
+        "poll": 1,
+        "created_at": "2022-08-06T16:57:45.545Z",
+        "choice": 3
+    }
+},
+{
+    "model": "webapp.answer",
+    "pk": 3,
+    "fields": {
+        "poll": 1,
+        "created_at": "2022-08-06T17:47:32.264Z",
+        "choice": 3
+    }
+},
+{
+    "model": "webapp.answer",
+    "pk": 4,
+    "fields": {
+        "poll": 1,
+        "created_at": "2022-08-06T17:53:11.080Z",
+        "choice": 5
+    }
+},
+{
+    "model": "webapp.answer",
+    "pk": 5,
+    "fields": {
+        "poll": 1,
+        "created_at": "2022-08-06T18:11:00.009Z",
+        "choice": 3
+    }
+},
+{
+    "model": "webapp.answer",
+    "pk": 6,
+    "fields": {
+        "poll": 1,
+        "created_at": "2022-08-06T18:12:11.649Z",
+        "choice": 5
+    }
+},
+{
+    "model": "webapp.answer",
+    "pk": 7,
+    "fields": {
+        "poll": 9,
+        "created_at": "2022-08-06T18:35:13.323Z",
+        "choice": 8
+    }
+},
+{
+    "model": "webapp.answer",
+    "pk": 8,
+    "fields": {
+        "poll": 1,
+        "created_at": "2022-08-06T18:35:26.278Z",
+        "choice": 2
+    }
+}
+]

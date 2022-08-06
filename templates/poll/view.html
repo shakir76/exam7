@@ -11,6 +11,7 @@
 {% block content %}
     <p>
         <span class="fw-bold">Опрос №:</span> {{ poll.pk }}
+        <span class="fw-bold">Вопрос №: {{ poll.question }}?</span>
     </p>
     <p class="fw-bold">Ответы:</p>
     {% for choice in poll.poll.all %}
